@@ -17,7 +17,7 @@ wget https://git.suyu.dev/suyu/suyu/releases/download/v0.0.3/suyu--20240410-0de4
 wget https://github.com/THZoria/NX_Firmware/releases/download/18.0.1/Firmware.18.0.1.zip -P /home/deck/Emulation/bios/yuzu/firmware/
 unzip /home/deck/Emulation/bios/yuzu/firmware/Firmware.18.0.1.zip -d /home/deck/Emulation/bios/yuzu/firmware/
 rm /home/deck/Emulation/bios/yuzu/firmware/*.zip
-wget https://github.com/THZoria/NX_Firmware/releases/download/18.0.1/Firmware.18.0.1.zip -P /home/deck/Emulation/bios/yuzu/keys/
+wget https://github.com/leonkasovan/steamdeck/releases/download/v.1.0/nsk.zip -P /home/deck/Emulation/bios/yuzu/keys/
 unzip /home/deck/Emulation/bios/yuzu/keys/nsk.zip -d /home/deck/Emulation/bios/yuzu/keys/
 rm /home/deck/Emulation/bios/yuzu/keys/*.zip
 ```
