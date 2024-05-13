@@ -23,6 +23,15 @@ cmake -DAPPIMAGE_BUILD=on -DSTEAM_DECK=on .
 make -j8
 ```
 
+This option removes all non-Steam entries, regardless of how they were added to Steam.  
+```
+In Desktop Mode, exit out of Steam
+Navigate to ~/.steam/steam/userdata/YOURSTEAMUSERID/
+Delete the config folder
+Delete the 760 folder
+Reopen Steam and validate that your ROMs were properly removed
+```
+
 # Emulator for Steamdeck
 A Symbian OS/N-Gage emulator
 ```
