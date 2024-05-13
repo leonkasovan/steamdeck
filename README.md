@@ -24,6 +24,11 @@ make -j8
 ```
 
 # Emulator for Steamdeck
+A Symbian OS/N-Gage emulator
+```
+https://github.com/EKA2L1/EKA2L1
+```
+
 Nintendo Switch : (Suyu)  
 ```
 wget https://git.suyu.dev/suyu/suyu/releases/download/v0.0.3/suyu--20240410-0de49070e4.AppImage -O /home/deck/Applications/yuzu.AppImage
