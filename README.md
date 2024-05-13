@@ -1,6 +1,19 @@
 # steamdeck
 Steamdeck Knowledge
 
+Setting Dev Environment
+```
+sudo steamos-readonly disable
+sudo sed -i '/^SigLevel/ s/.*/SigLevel = Never/' /etc/pacman.conf
+sudo pacman -Sy gcc cmake make autoconf binutils pkg-config
+sudo pacman -Sy gcc glibc linux-api-headers alsa-lib libx11 xorgproto gtk3 glib2 libxcursor libxrandr pango libxrender libxinerama harfbuzz libxi cairo gdk-pixbuf2 libxext libxfixes at-spi2-core libglvnd sdl2
+wget https://go.dev/dl/go1.22.2.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.22.2.linux-amd64.tar.gz
+export PATH=$PATH:/usr/local/go/bin
+sed -i '$a\export PATH=$PATH:/usr/local/go/bin' ~/.bashrc
+sudo steamos-readonly enable
+```
+
 Build EmulationStation Desktop Edition  
 ```
 git clone https://gitlab.com/es-de/emulationstation-de.git
