@@ -23,6 +23,17 @@ cmake -DAPPIMAGE_BUILD=on -DSTEAM_DECK=on .
 make -j8
 ```
 
+Update EmulationStation Desktop Edition in ES-DE.AppImage
+```
+cd ~/Applications
+./ES-DE.AppImage --appimage-extract
+wget https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage
+chmod 0755 appimagetool-x86_64.AppImage
+cp /path/to/es-de ~/Applications/squashfs-root/usr/bin
+./appimagetool-x86_64.AppImage squashfs-root
+mv ES-DE-x86_64.AppImage ES-DE.AppImage 
+```
+
 This option removes all non-Steam entries, regardless of how they were added to Steam.  
 ```
 In Desktop Mode, exit out of Steam
