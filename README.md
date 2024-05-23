@@ -43,6 +43,9 @@ Delete the 760 folder
 Reopen Steam and validate that your ROMs were properly removed
 ```
 
+# ROMS source
+https://r-roms.github.io/  
+
 # Emulator for Steamdeck
 A Symbian OS/N-Gage emulator
 ```
