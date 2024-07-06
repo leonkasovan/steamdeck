@@ -5,6 +5,7 @@ Setting Dev Environment
 ```
 sudo steamos-readonly disable
 sudo sed -i '/^SigLevel/ s/.*/SigLevel = Never/' /etc/pacman.conf
+sudo sed -i 's/3\.5/3.6/g' /etc/pacman.conf
 sudo pacman -Sy gcc cmake make autoconf binutils pkg-config
 sudo pacman -Sy gcc glibc linux-api-headers alsa-lib libx11 xorgproto gtk3 glib2 libxcursor libxrandr pango libxrender libxinerama harfbuzz libxi cairo gdk-pixbuf2 libxext libxfixes at-spi2-core libglvnd sdl2
 wget https://go.dev/dl/go1.22.2.linux-amd64.tar.gz
@@ -69,4 +70,14 @@ wget https://github.com/Lime3DS/Lime3DS/releases/download/2111/lime3ds-2111-linu
 tar -xvzf lime3ds-2111-linux-appimage.tar.gz
 mv lime3ds-2111-linux-appimage/lime-qt.AppImage /home/deck/Applications/citra-qt.AppImage
 rm -r lime3ds-2111-linux-appimage
+```
+
+# Common Command Line
+```
+1. sudo steamos-readonly enable
+2. update pacman db: sudo pacman -Fy 
+3. find a file in pacman db: pacman -F lua.h
+4. find package: pacman -Ss "name"
+5. install package: sudo pacman -S lua
+6. edit and goto line: nano +1316 external/script/main.lua
 ```
