@@ -10,8 +10,9 @@ Source: https://www.youtube.com/watch?v=7jyqI8n5B8k
 4. Try to run it in Windows (optional)
 5. Boot to SteamOS and go to Desktop mode
 6. get SDCard's UUID: lsblk -oNAME,UUID
+6. sudo mkdir -p /run/media/deck/sdcard0
 7. Set auto mount for that UUID by editing file: sudo nano /etc/fstab
-8. Append this: UUID=[YOUR UUID] /media/[MOUNT POINT] lowntfs-3g uid=1000,gid=1000,rw,user,exec,umask=000,nofail 0 0
+8. Append this: UUID=[YOUR UUID] /run/media/deck/sdcard0 lowntfs-3g uid=1000,gid=1000,rw,user,exec,umask=000,nofail 0 0
 9. Reboot SteamOS
 10. Add storage for SDCard in SteamOS
 11. Make sure compatibility to use correct Proton
