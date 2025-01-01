@@ -62,6 +62,22 @@ Delete the 760 folder
 Reopen Steam and validate that your ROMs were properly removed
 ```
 
+# Setup cross compile for aarch64
+https://github.com/Cebion/Portmaster_builds  
+Using konsole in desktop mode  
+```
+wget https://cloud-images.ubuntu.com/releases/focal/release/ubuntu-20.04-server-cloudimg-arm64-root.tar.xz
+mkdir folder
+sudo tar -xpf ubuntu-20.04-server-cloudimg-arm64-root.tar.xz -C folder
+sudo steamos-readonly disable
+sudo pacman -S qemu-user-static
+sudo cp /usr/bin/qemu-aarch64-static ~/data/ubuntu-20.04-root/usr/bin
+sudo daemonize /usr/bin/unshare -fp --mount-proc /lib/systemd/systemd --system-unit=basic.target
+ls /proc/sys/fs/binfmt_misc/
+sudo mount -o bind /dev folder/dev
+sudo chroot folder qemu-aarch64-static /bin/bash
+```
+
 # ROMS source
 https://r-roms.github.io/  
 
