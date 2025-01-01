@@ -99,3 +99,7 @@ rm -r lime3ds-2111-linux-appimage
 5. install package: sudo pacman -S lua
 6. edit and goto line: nano +1316 external/script/main.lua
 ```
+
+Rotate virtual console  
+`echo 1 | sudo tee /sys/class/graphics/fbcon/rotate`
+`echo 0 | sudo tee /sys/class/graphics/fbcon/rotate`
