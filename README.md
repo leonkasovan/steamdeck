@@ -76,6 +76,14 @@ sudo pacman -S qemu-user-static-binfmt
 sudo cp /usr/bin/qemu-aarch64-static folder/usr/bin
 sudo chroot folder qemu-aarch64-static /bin/bash
 ```
+in chroot run
+```
+rm /etc/resolv.conf
+eccho "nameserver 8.8.8.8" > /etc/resolv.conf
+sudo chmod 1777 /tmp
+apt update
+apt upgrade
+```
 
 # ROMS source
 https://r-roms.github.io/  
