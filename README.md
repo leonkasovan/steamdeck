@@ -71,10 +71,9 @@ mkdir folder
 sudo tar -xpf ubuntu-20.04-server-cloudimg-arm64-root.tar.xz -C folder
 sudo steamos-readonly disable
 sudo pacman -S qemu-user-static
-sudo cp /usr/bin/qemu-aarch64-static ~/data/ubuntu-20.04-root/usr/bin
-sudo daemonize /usr/bin/unshare -fp --mount-proc /lib/systemd/systemd --system-unit=basic.target
-ls /proc/sys/fs/binfmt_misc/
-sudo mount -o bind /dev folder/dev
+sudo pacman -S qemu-system-aarch64
+sudo pacman -S qemu-user-static-binfmt
+sudo cp /usr/bin/qemu-aarch64-static folder/usr/bin
 sudo chroot folder qemu-aarch64-static /bin/bash
 ```
 
